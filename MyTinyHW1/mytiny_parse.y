@@ -191,8 +191,8 @@ actparams	:	expr oexpr
 		{ printf("ActualParams -> \n"); }
 	;
 	
-oexpr	:	lSEMI expr oexpr
-		{ printf("OtherFormals -> SEMI Expr OtherExpr\n"); }
+oexpr	:	lCOMMA expr oexpr
+		{ printf("OtherFormals -> COMMA Expr OtherExpr\n"); }
 	|
 		{ printf("OtherExpression -> \n"); }
 	;
