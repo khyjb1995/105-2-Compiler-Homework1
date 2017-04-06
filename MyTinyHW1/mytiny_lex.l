@@ -37,8 +37,11 @@ REAL		{return lREAL;}
 "!="		{return lNEQ;}
 ">="		{return lGE;}
 "<="		{return lLE;}
+{ID}		{sscanf(yytext, "%s", name); return lID;}
+{DIG}		{sscanf(yytext, "%d", &ival); return lINUM;}
+{RNUM}		{sscanf(yytext, "%f", &rval); return lRNUM;}
 
-// Identifiers, Integer numbers, Real numbers
+
 
 \"{NQUO}*\"	{sscanf(yytext,"%s", qstr); return lQSTR;}
 "/*"		{ BEGIN(C_COMMENT); }
