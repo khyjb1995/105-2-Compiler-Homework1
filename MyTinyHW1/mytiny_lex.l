@@ -7,7 +7,7 @@
 
 ID  [A-Za-z][A-Za-z0-9]*
 DIG [0-9][0-9]*
-RNUM {DIG}'.'{DIG}
+RNUM {DIG}[.]{DIG}
 NQUO [^"]
 
 %%
