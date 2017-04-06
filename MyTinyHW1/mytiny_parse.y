@@ -186,13 +186,14 @@ boolexpr	:	expr lEQU expr
 	;
 	
 actparams	:	expr oexpr
-		{ printf("ActualParams -> Expr OtherExpr\n"); }
+		{ printf("ActualParams -> Expression OtherExpression\n"); }
 	|
 		{ printf("ActualParams -> \n"); }
 	;
-	
-oexpr	:	lSEMI expr oexpr
-		{ printf("OtherFormals -> SEMI Expr OtherExpr\n"); }
+
+	;	
+oexpr	:	lCOMMA expr oexpr
+		{ printf("OtherFormals -> SEMI Expr OtherExpression\n"); }
 	|
 		{ printf("OtherExpression -> \n"); }
 	;
